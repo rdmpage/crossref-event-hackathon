@@ -22,13 +22,13 @@ DOIs for
 
 ## Example events
 
-### GBIF DOI linked to paper
+### GBIF DOI linked to paper DOI
 
 This paper has a CrossRef DOI **10.5431/aramit5205**
 
 Lissner, J., & Bosmans, R. (2016, September 30). Description of a newGibbaranea(Araneae: Araneidae) from the Western Mediterranean. Arachnologische Mitteilungen. Arachnologische Gesellschaft e.v. https://doi.org/10.5431/aramit5205
 
-This event [003fcaa7-af8a-458a-b584-3aabd2c8924b](https://query.eventdata.crossref.org/events/003fcaa7-af8a-458a-b584-3aabd2c8924b) links the GBIF DOI [10.15468/dl.28rkpl](https://doi.org/10.15468/dl.28rkpl) to the article  [10.5431/aramit5205](https://doi.org/10.5431/aramit5205).
+This event [003fcaa7-af8a-458a-b584-3aabd2c8924b](https://query.eventdata.crossref.org/events/003fcaa7-af8a-458a-b584-3aabd2c8924b) links the GBIF download DOI [10.15468/dl.28rkpl](https://doi.org/10.15468/dl.28rkpl) to the article  [10.5431/aramit5205](https://doi.org/10.5431/aramit5205).
 
 ```
 {
@@ -45,4 +45,18 @@ This event [003fcaa7-af8a-458a-b584-3aabd2c8924b](https://query.eventdata.crossr
 	"relation_type_id": "references"
 }
 ```
+
+Ah, now I see. The paper 10.5431/aramit5205 doesn't mention GBIF, but the GBIF dataset [Description of a new Gibbaranea (Araneae: Araneidae) from the Western Mediterranean](http://www.gbif.org/dataset/753fbf2c-beb9-4ee0-a9a5-50e3198be373) has the same DOI and also the alternative identifier [10.15468/ijsonr](http://dx.doi.org/doi:10.15468/ijsonr)
+
+```
+<dataset>
+<alternateIdentifier>doi:10.5431/aramit5205</alternateIdentifier>
+<alternateIdentifier>doi:10.15468/ijsonr</alternateIdentifier>
+<alternateIdentifier>FFB60C131215FF9FFFFAFFA0EA6DFFE9</alternateIdentifier>
+</dataset>
+```
+
+So, anyone downloading this dataset will generate an event linking the article DOI to a GBIF data. We can get these same links via the [GBIF API](http://api.gbif.org/v1/occurrence/download/dataset/753fbf2c-beb9-4ee0-a9a5-50e3198be373).
+
+
             
