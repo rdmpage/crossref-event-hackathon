@@ -8,6 +8,12 @@ To get 100 events for GBIF DOIs (prefix **10.15468**):
 
 https://query.eventdata.crossref.org/events?rows=100&filter=prefix%3A10.15468
 
+## Getting events for one DOI
+
+Events involving GBIF backbone
+
+https://query.eventdata.crossref.org/events?filter=work:10.15468/39omei
+
 
 ## Events
 
@@ -17,7 +23,7 @@ The things that mentions a DOI is the subject, the DOI it mentions is the object
 
 ### is_previous_version_of
 
-DOIs for 
+DOIs for articles and GBIF datasets for that data are linked by **is_previous_version_of** relationship.
 
 
 ## Example events
@@ -57,6 +63,36 @@ Ah, now I see. The paper 10.5431/aramit5205 doesn't mention GBIF, but the GBIF d
 ```
 
 So, anyone downloading this dataset will generate an event linking the article DOI to a GBIF data. We can get these same links via the [GBIF API](http://api.gbif.org/v1/occurrence/download/dataset/753fbf2c-beb9-4ee0-a9a5-50e3198be373).
+
+
+## Citations
+
+
+
+## Citations in journal metadata
+
+The GBIF Backbone is cited by  http://dx.doi.org/10.1007/s10841-016-9939-x, and this can be seen in the DOI record for this article:
+
+https://api.crossref.org/v1/works/http://dx.doi.org/10.1007/s10841-016-9939-x
+
+```
+{
+	"key": "9939_CR26",
+	"unstructured": "GBIF Backbone Taxonomy (2016) doi:\n10.15468\/39omei\n\n. Accessed 28 Oct 2016",
+	"DOI": "10.15468\/39omei"
+}
+```
+
+Unfortunately at the moment we can't query the CrossRef API for articles that cite a given DOI. I discovered this article citation via [Google Scholar](https://scholar.google.co.uk/scholar?hl=en&q=10.15468).
+
+
+
+
+		
+
+
+
+
 
 
             
