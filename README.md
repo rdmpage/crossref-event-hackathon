@@ -5,9 +5,8 @@ Playing with CrossRef event data
 
 To get 100 events for GBIF DOIs (prefix **10.15468**):
 
-```
 https://query.eventdata.crossref.org/events?rows=100&filter=prefix%3A10.15468
-```
+
 
 ## Events
 
