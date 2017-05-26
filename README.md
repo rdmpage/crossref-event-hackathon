@@ -26,6 +26,10 @@ The things that mentions a DOI is the subject, the DOI it mentions is the object
 DOIs for articles and GBIF datasets for that data are linked by **is_previous_version_of** relationship.
 
 
+### is_part_of
+
+For example, the Zootaxa DOI https://doi.org/10.11646/zootaxa.4263.2.8 is linked to Zenodo DOIs (e.g., https://doi.org/10.5281/zenodo.573168) via this relationship (e.g., figures extracted by Plaza)
+
 ## Example events
 
 ### GBIF DOI linked to paper DOI
